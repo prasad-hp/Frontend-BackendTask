@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface InputProps {
     buttonSubmit:boolean,
     text: string
 }
-
 function InputButton({buttonSubmit, text}:InputProps){
     const [buttonDesign, setButtonDesign] = useState("bg-gray-800 text-gray-500")
     useEffect(()=>{
