@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ChangeEvent, FormEvent } from 'react';
+import { useEffect, useState, ChangeEvent, FormEvent } from 'react';
 import Input from '../components/Input';
 import InputButton from '../components/InputButton';
 import axios from "axios";
@@ -45,8 +45,8 @@ function Landing() {
     }
 
     return (
-        <div className='h-screen w-screen flex'>
-            <form onSubmit={handleSubmit} className='flex flex-col justify-center w-1/3 text-center'>
+        <div className='h-screen w-screen flex flex-col md:flex-row'>
+            <form onSubmit={handleSubmit} className='flex flex-col justify-center md:w-1/3 w-full text-center'>
                 <p className='text-2xl font-semibold text-center'>Input Contact Info</p>
                 <Input
                     type='email'
@@ -63,7 +63,7 @@ function Landing() {
                 <p className='text-center'>{message}</p>
                 <InputButton buttonSubmit={button} text='Submit' />
             </form>
-            <div className='w-2/3 p-4'>
+            <div className='md:w-2/3 p-4 w-full'>
                 <h1 className='text-3xl text-center'>Contacts</h1>
                 <div className='flex space-x-4 items-start'>
                     <h3 className='text-xl font-semibold w-60'>Primary Contact Id :</h3>
