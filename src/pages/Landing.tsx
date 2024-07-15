@@ -72,7 +72,7 @@ function Landing() {
                 <div className='flex space-x-4 items-start'>
                     <h3 className='text-xl font-semibold w-60'>Emails :</h3>
                     <ul className='text-xl'>
-                        {emails.map((email, index) => (
+                        {  message === "Data Loaded Successfully" && emails.length === 0 ? <p> [ ] </p> : emails.map((email, index) => (
                             <li key={index}>{email}</li>
                         ))}
                     </ul>
@@ -80,7 +80,7 @@ function Landing() {
                 <div className='flex space-x-4 items-start'>
                     <h3 className='text-xl font-semibold w-60'>Phone Numbers :</h3>
                     <ul className='text-xl'>
-                        {phoneNumbers.map((number, index) => (
+                        { message === "Data Loaded Successfully" && phoneNumbers.length === 0 ? <p> [ ] </p> : phoneNumbers.map((number, index) => (
                             <li key={index}>{number}</li>
                         ))}
                     </ul>
@@ -88,7 +88,7 @@ function Landing() {
                 <div className='flex space-x-4 items-start'>
                     <h3 className='text-xl font-semibold w-60'>Secondary Contact IDs : </h3>
                     <ul className='text-xl'>
-                        {secondaryIds.map((id, index) => (
+                        { message === "Data Loaded Successfully" && secondaryIds.length === 0 ? <p> [ ] </p> : secondaryIds.map((id, index) => (
                             <li key={index}>{id}</li>
                         ))}
                     </ul>
